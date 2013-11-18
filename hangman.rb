@@ -6,7 +6,6 @@ puts "Welcome to Hangman!"
 words = ["apple", "banana", "orange"]
 #chossing a random word
 @word = words[rand(words.length)]
-puts @word
 #turning that word into an array of letters
 @letters = @word.split('')
 @chances = 8
@@ -58,6 +57,7 @@ def validate_input
       end
   end
 end
+
 
 validate_input
 while @chances > 0
