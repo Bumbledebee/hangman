@@ -46,7 +46,6 @@ class GameMaster
     @guessed_letters << @guessed_letter if @letters.include?(@guessed_letter)
     if @letters.include?(@guessed_letter)
       puts "Found occurrence(s) of the character #{@guessed_letter}."
-      binding.pry
       print_word
     else
       puts "Sorry, no #{@guessed_letter}'s found."
@@ -56,7 +55,7 @@ class GameMaster
   end
 
   def check_word
-    @guessed_word = @user_input
+    @guessed_word = @input
       if @guessed_word == @word
         print "Hurray you won, it is indeed #{@word}"
         exit
