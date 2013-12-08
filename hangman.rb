@@ -68,15 +68,3 @@ while @chances > 0
     exit
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
