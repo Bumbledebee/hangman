@@ -1,4 +1,4 @@
-require 'pry'
+
 
 class Word
 
@@ -21,6 +21,7 @@ class Word
 
     @word = wordbank.sample.downcase
   end
+
 
 end
 
