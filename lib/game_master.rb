@@ -8,12 +8,6 @@ class GameMaster
 
   def initialize(wordbank)
     puts "Welcome to Hangman!"
-    word = Word.new(wordbank)
-    #funny 1
-    @word = word.word
-    print @word
-    @letters = word.word.split('')
-    puts "Word: #{word.word.gsub(/\w/, '_')}"
     @guessed_letters = []
     @chances = 8
     prompt_guess
@@ -23,7 +17,6 @@ class GameMaster
   private
 
   def print_word
-    #funny 2
     @regex = /[^[#{@guessed_letters.join('')}]]+/
     print "Word: #{@letters.join.gsub(@regex, '_')}\n"
   end
@@ -81,5 +74,3 @@ end
 
 GameMaster.new ["apple", "orange", "pear"]
 
-### question: How to fix the regex thing ?
-### How to get the string of the object ??

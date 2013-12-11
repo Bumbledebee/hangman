@@ -1,8 +1,8 @@
-
+require 'pry'
 
 class Word
 
-  attr_reader :word
+  attr_reader :word, :letters
 
   def initialize(wordbank)
     if wordbank.class != Array
@@ -22,8 +22,24 @@ class Word
     @word = wordbank.sample.downcase
   end
 
+  def letters
+    @letters = word.split('')
+  end
 
 end
 
 
-# print Word.new(["heelo", "sdf", "wer"])
+class Display
+
+  def self.print_beginning word
+    puts "Word: #{word.word.gsub(/\w/, '_')}"
+  end
+
+  def self.print_progress
+  end
+
+end
+
+
+@word = Word.new(["apple", "pear", "banana"])
+Display.print_beginning @word
